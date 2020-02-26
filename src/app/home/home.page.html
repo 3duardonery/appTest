@@ -13,8 +13,94 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-item>
+        <ion-label>Selecione o dia</ion-label>
+          <ion-datetime 
+            displayFormat="DD/MM/YYYY"
+            monthShortNames="Jan, Fev, Mar, Abr, Mai, Jun, Jul, Ago, Set, Out, Nov, Dez"
+            (ionChange)="selectDate($event)" >
+          </ion-datetime>
+      </ion-item>        
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>Temperatura do sensor</ion-card-subtitle>
+            <ion-card-title>Temperatura</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <canvas #bar1></canvas>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>He Level</ion-card-subtitle>
+            <ion-card-title>Nível de He</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <canvas #bar2></canvas>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>Volts</ion-card-subtitle>
+            <ion-card-title>Volts da bateria</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <canvas #bar3></canvas>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>Shield Sensor 1</ion-card-subtitle>
+            <ion-card-title>Temeperature in k</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-item>
+              <ion-icon name="thermometer-outline"></ion-icon>
+              <ion-label>Shield Sensor 1: 43.7K</ion-label>
+            </ion-item>    
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>Shield Sensor 2</ion-card-subtitle>
+            <ion-card-title>Temeperature in k</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-item>
+              <ion-icon name="thermometer-outline"></ion-icon>
+              <ion-label>Shield Sensor 1: 47.2K</ion-label>
+            </ion-item>    
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>Sensores</ion-card-subtitle>
+            <ion-card-title>Listar sensores</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>    
+            <ion-item>
+
+            </ion-item>       
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
